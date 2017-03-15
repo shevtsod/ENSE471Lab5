@@ -60,3 +60,17 @@ freeline_project_description.json
 gen-external-apklibs
 
 # End of https://www.gitignore.io/api/android
+
+
+accepted
+Update: Since Android Studio 2.2, new projects are created with this gitignore file:
+
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
