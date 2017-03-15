@@ -30,24 +30,28 @@
 
     <android.support.constraint.ConstraintLayout
         android:background="@drawable/border"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_marginEnd="32dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
         android:layout_marginStart="32dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_height="0dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="0.55"
+        android:layout_marginTop="32dp">
 
         <TextView
             android:text="Fields must not be empty!"
             android:id="@+id/inputErrorMessage"
             android:lines="2"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:textColor="@android:color/holo_red_dark"
             app:layout_constraintLeft_toLeftOf="@+id/email"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/submitButton" />
+            app:layout_constraintTop_toBottomOf="@+id/submitButton"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="8dp" />
 
         <TextView
             android:text="@string/login_label"
@@ -57,7 +61,8 @@
             android:layout_marginStart="16dp"
             app:layout_constraintLeft_toLeftOf="parent"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="normal|bold" />
 
         <TextView
             android:text="@string/email_or_phone"
@@ -83,13 +88,12 @@
                 android:ems="10"
                 android:id="@+id/email"
             android:selectAllOnFocus="false"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintRight_toRightOf="parent"
             android:layout_marginStart="16dp"
             app:layout_constraintLeft_toRightOf="@+id/emailLabel"
-            app:layout_constraintHorizontal_bias="0.52"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/loginLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/loginLabel"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="16dp" />
 
         <EditText
                 android:layout_width="0dp"
@@ -111,7 +115,9 @@
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
             app:layout_constraintLeft_toLeftOf="@+id/email"
             android:layout_marginTop="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+            app:layout_constraintTop_toBottomOf="@+id/password"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="64dp" />
 
         <Button
                 android:text="Log In"
@@ -136,8 +142,10 @@
             android:textSize="12sp"
             android:textColor="@color/colorPrimary"
             android:textAlignment="textStart"
-            app:layout_constraintTop_toBottomOf="@+id/inputErrorMessage"
-            app:layout_constraintLeft_toLeftOf="@+id/email" />
+            app:layout_constraintLeft_toLeftOf="@+id/email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputErrorMessage" />
 
     </android.support.constraint.ConstraintLayout>
 
